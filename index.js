@@ -6,7 +6,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const DBURL = process.env.DBURL;
-//"mongodb+srv://admin3:123@cluster0.cu5k7.mongodb.net/JWT?retryWrites=true&w=majority"
 const SECRET_ACCSES = process.env.SECRET_ACCSES;
 const SECRET_REFRESH = process.env.SECRET_REFRESH;
 const app = express();
