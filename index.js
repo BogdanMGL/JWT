@@ -29,7 +29,7 @@ const generateToken = (user) => {
     const payload = { user };
     const TTL = Math.round(30 + Math.random() * 30);
 
-    const accsessToken = jwt.sign(payload, SECRET_ACCSES, { expiresIn: '29d'})
+    const accsessToken = jwt.sign(payload, SECRET_ACCSES, { expiresIn: TTL})
     const refreshToken = jwt.sign(payload, SECRET_REFRESH, { expiresIn: '30d' })
     saveToken(user, refreshToken, accsessToken);
     return {
